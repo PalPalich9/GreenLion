@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BacketFragment">
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:orientation="vertical"
+        android:layout_marginBottom="100sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+
+        </ListView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewSum"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="70dp"
+        android:layout_gravity="bottom"
+        android:textDirection = "rtl"
+        android:layout_marginEnd="10dp"
+
+        android:textSize = "40sp">
+
+    </TextView>
+    <Button
+        android:id="@+id/btnToOrder"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="15dp"
+        android:background="@color/darkgreen"
+        android:text="Оформить заказ">
+
+    </Button>
+
+</FrameLayout>

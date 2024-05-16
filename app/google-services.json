@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "546512778387",
+    "firebase_url": "https://palpalich-7fe5e-default-rtdb.firebaseio.com",
+    "project_id": "palpalich-7fe5e",
+    "storage_bucket": "palpalich-7fe5e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546512778387:android:78f9733dc919c49b29c966",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAU9O162bajJd_AoZnr_NvqWFfy_bimI1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width = "match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:background="@color/green">
+
+        <ImageButton
+            android:id="@+id/btnLion"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_marginHorizontal="10sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:onClick="onClickCatalog"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/green_lion"></ImageButton>
+
+        <ImageButton
+            android:id="@+id/btnCalendar"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_marginStart="60sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/green"
+            android:onClick="onClickCalendar"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/calendar"></ImageButton>
+
+        <ImageButton
+            android:id="@+id/btnBacket"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:onClick="onClickBacket"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/backet">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/btnUser"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_gravity="end|center"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:onClick="onClickUser"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/user">
+
+        </ImageButton>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header">
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/btnImageCatalog"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:scaleType="centerInside">
+    </ImageView>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="220sp"
+        android:layout_height="100sp">
+        <TextView
+            android:id="@+id/textViewNameCatalog"
+            android:layout_width="match_parent"
+            android:layout_height="45sp"
+            android:textSize="20dp"
+            android:layout_marginTop="5sp"
+            android:layout_marginStart="10sp"
+            android:textColor="@color/black">
+        </TextView>
+        <TextView
+            android:id="@+id/textViewCostCatalog"
+            android:layout_width="160sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content">
+        </TextView>
+        <TextView
+            android:id="@+id/textViewCountCatalog"
+            android:layout_width="160sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginBottom="0dp">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="80sp"
+        android:layout_gravity="end"
+
+        android:layout_height="100sp">
+
+        <ImageButton
+            android:id="@+id/btnAdd"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="0sp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="25sp"
+            android:background="@drawable/custom_btn"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/plusik">
+
+        </ImageButton>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

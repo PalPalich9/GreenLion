@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/imageBacket"
+        android:layout_width="100sp"
+        android:layout_height="100sp">
+    </ImageView>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="160sp"
+        android:layout_height="100sp">
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="150sp"
+            android:scrollbars = "vertical"
+            android:maxLines = "5"
+            android:layout_height="wrap_content"
+            android:textSize = "20sp"
+            android:textColor = "@color/black"
+            android:layout_marginBottom="20sp">
+        </TextView>
+        <TextView
+            android:id="@+id/textViewCost"
+            android:layout_width="160sp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp">
+        </TextView>
+        <TextView
+            android:id="@+id/textViewCount"
+            android:layout_width="160sp"
+            android:layout_height="wrap_content">
+        </TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="150sp"
+        android:layout_height="100sp">
+        <ImageButton
+            android:id = "@+id/btnTrash"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            android:background="@color/white"
+            android:scaleType="centerInside"
+            app:srcCompat = "@drawable/trash">
+
+        </ImageButton>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="150sp"
+            android:layout_height="50sp">
+            <Button
+                android:id = "@+id/btnDecremet"
+                android:layout_width="40sp"
+                android:text="-"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:layout_gravity="bottom"
+                android:layout_height="40sp"
+                android:background="@color/darkgreen">
+            </Button>
+
+            <TextView
+                android:id = "@+id/textViewCurCount"
+                android:layout_width="50sp"
+                android:layout_height="40sp"
+                android:layout_gravity="bottom"
+
+                android:textAlignment = "center"
+                android:textSize="30sp"
+                android:textColor="@color/black">
+            </TextView>
+            <Button
+                android:id = "@+id/btnIncrement"
+                android:text="+"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="bottom"
+
+                android:background="@color/darkgreen"
+                android:layout_width="40sp"
+                android:layout_height="40sp">
+            </Button>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
