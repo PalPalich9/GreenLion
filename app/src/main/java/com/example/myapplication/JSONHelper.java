@@ -2,11 +2,20 @@ package com.example.myapplication;
 
 import android.content.Context;
 import com.google.gson.Gson;
+
+
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+
+
+
+import org.json.JSONException;
+
 
 
 //      Класс для работы c Json файлами
@@ -38,20 +47,26 @@ class JSONHelper {
 
 
     //Метод получения данных из файла
-    static ArrayList<Notif> importFromJSON(Context context) {
+    static void importFromJSON(Context context) {
 
-        try(FileInputStream fileInputStream = context.openFileInput(FILE_NAME);
-            InputStreamReader streamReader = new InputStreamReader(fileInputStream)){
+        File file = new File(FILE_NAME);
 
-            Gson gson = new Gson();
-            DataItems dataItems = gson.fromJson(streamReader, DataItems.class);
-            return  dataItems.getNotif();
+        // Проверка, что файл JSON не пустой
+        if (file != null && file.length() > 0) {
+            try(FileInputStream fileInputStream = context.openFileInput(FILE_NAME);
+                InputStreamReader streamReader = new InputStreamReader(fileInputStream)){
+
+                Gson gson = new Gson();
+                DataItems dataItems = gson.fromJson(streamReader, DataItems.class);
+                Arr.notifs = dataItems.getNotif();
+            }
+            catch (IOException ex){
+                ex.printStackTrace();
+            }
         }
-        catch (IOException ex){
-            ex.printStackTrace();
-        }
 
-        return null;
+
+
     }
 
 
