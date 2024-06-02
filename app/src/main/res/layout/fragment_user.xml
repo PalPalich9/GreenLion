@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="500dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerInside"
+                 />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="23dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edName"
+                    android:layout_width="200sp"
+                    android:layout_height="50sp"
+                    android:layout_marginTop="15dp"
+                    android:ems="10"
+                    android:hint="Имя"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/edLastname"
+                    android:layout_width="200sp"
+                    android:layout_height="50sp"
+                    android:layout_marginTop="20dp"
+
+                    android:ems="10"
+                    android:hint="Фамилия"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/edThirdname"
+                    android:layout_marginTop="20dp"
+
+                    android:layout_width="200sp"
+                    android:layout_height="50sp"
+                    android:ems="10"
+                    android:hint="Отчество"
+                    android:inputType="text" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="409dp"
+            android:layout_height="498dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:layout_margin="15dp"
+
+                    android:hint="Телефон"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/edEMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:layout_margin="15dp"
+
+                    android:hint="e-mail"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/edSNILS"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_margin="15dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+
+                    android:hint="СНИЛС"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/edStrahPolis"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_margin="15dp"
+                    android:layout_marginTop="10dp"
+
+                    android:ems="10"
+                    android:hint="Страховой полис"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/edAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_margin="15dp"
+
+                    android:ems="10"
+                    android:hint="Адрес"
+                    android:inputType="text" />
+
+                <Button
+                    android:id="@+id/btnSaveUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="30dp"
+                    android:text="Сохранить"
+                    android:background="@color/darkgreen"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
