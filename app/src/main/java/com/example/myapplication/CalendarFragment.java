@@ -34,6 +34,7 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 
@@ -54,18 +55,23 @@ public class CalendarFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-         JSONHelper.importFromJSON(getContext());
-         curItems();
+         notifs = JSONHelper.importFromJSON(getContext());
+         //curItems();
 
     }
 
     //Не показываем уведомления, которые уже в прошлом
     public void curItems() {
+        ArrayList<Notif> del = new ArrayList<>();
         if (!notifs.isEmpty()) {
             for (Notif nt : notifs) {
                 if (nt.getMilliTime() < System.currentTimeMillis() + 60000) {
-                    notifs.remove(notifs.indexOf(nt));
+                    //notifs.remove(notifs.indexOf(nt));
+                    del.add(nt);
                 }
+            }
+            for (Notif nt : del) {
+                notifs.remove(notifs.indexOf(nt));
             }
         }
 
@@ -118,6 +124,7 @@ public class CalendarFragment extends Fragment {
                 }
                 else {
                     notifs.add(new Notif(Integer.parseInt(Arr.readNumFile(getContext())) - 1, spinner.getSelectedItem().toString(), getNormalTime(datePicker, timePicker), calendar.getTimeInMillis()));
+                    Arr.writeNumFile(getContext());
                     JSONHelper.exportToJSON(getContext(), notifs);
                     adapter.notifyDataSetChanged();
                     int year = datePicker.getYear();
@@ -126,6 +133,8 @@ public class CalendarFragment extends Fragment {
                     int hour = timePicker.getCurrentHour();
                     int minute = timePicker.getCurrentMinute();
                     createNotification();
+
+
 
                     Toast.makeText(getContext(), "Добавлено уведомление", Toast.LENGTH_SHORT).show();
                 }

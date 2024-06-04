@@ -78,29 +78,6 @@ public  class Arr {
        }
 
 
-
-
-
-
-
-
-        /*try {
-            FileInputStream fileInputStream;
-            fileInputStream = context.openFileInput("idSet");
-            InputStreamReader reader = new InputStreamReader(fileInputStream);
-            BufferedReader bufferedReader = new BufferedReader(reader);
-            StringBuffer stringBuffer = new StringBuffer();
-            String line;
-            while ((line = bufferedReader.readLine()) != null) {
-                stringBuffer.append(line);
-            }
-            return stringBuffer.toString();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }*/
-
     }
 
     //записываем следующий номер для уведомления в файл idSet

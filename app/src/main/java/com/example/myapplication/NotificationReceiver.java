@@ -38,7 +38,7 @@ public class NotificationReceiver extends BroadcastReceiver {
         createChannelIfNeeded(notificationManager);
 
         notificationManager.notify(Integer.parseInt(Arr.readNumFile(context)), builder.build());
-        Arr.writeNumFile(context);
+        //Arr.writeNumFile(context);
 
     }
 

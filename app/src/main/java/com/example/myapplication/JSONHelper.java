@@ -47,23 +47,22 @@ class JSONHelper {
 
 
     //Метод получения данных из файла
-    static void importFromJSON(Context context) {
+    static ArrayList<Notif> importFromJSON(Context context) {
 
-        File file = new File(FILE_NAME);
 
-        // Проверка, что файл JSON не пустой
-        if (file != null && file.length() > 0) {
             try(FileInputStream fileInputStream = context.openFileInput(FILE_NAME);
                 InputStreamReader streamReader = new InputStreamReader(fileInputStream)){
 
                 Gson gson = new Gson();
                 DataItems dataItems = gson.fromJson(streamReader, DataItems.class);
-                Arr.notifs = dataItems.getNotif();
+                return dataItems.getNotif();
             }
             catch (IOException ex){
                 ex.printStackTrace();
             }
-        }
+            ArrayList<Notif> firstTime = new ArrayList<>();
+            firstTime.add(new Notif(0, "firstTime", "100", 100L));
+            return firstTime;
 
 
 
