@@ -76,7 +76,7 @@ public class CalendarAdapter extends ArrayAdapter<Notif> {
                 notifs.remove(position);
                 notifyDataSetChanged();
 
-                Toast.makeText(getContext(), "Уведомление удалено", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getContext(), "Уведомление удалено", Toast.LENGTH_SHORT).show();
             }
         });*/
 
